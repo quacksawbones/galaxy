@@ -1,0 +1,22 @@
+<tool id="reverse_tsv_tool_test" name="Reverse TSV - Bash" version="0.0.1">
+	<description>Test script that uses awk to reverse the order of tab-delimited data</description>
+	<command>bash '${__tool_directory__}/reverse_tsv.sh' '$input' '$output'</command>
+	<inputs>
+		<param format="tabular" name="input" type="data" label="Source file"/>
+	</inputs>
+	<outputs>
+		<data format="tabular" name="output"/>
+	</outputs>
+
+	<tests>
+		<test>
+			<param name="input" value="test.tsv"/>
+			<output name="out_file1" file="reversed_test.tsv"/>
+		</test>
+	</tests>
+
+	<help>
+		This test tool reverses a tab separated input.
+	</help>
+
+</tool>
